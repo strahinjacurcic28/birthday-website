@@ -11,11 +11,14 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   background: #faf5f2;
   color: #3b3032;
+  -webkit-text-size-adjust: 100%;
 }
 
 button,
 input {
   font: inherit;
+  color: #3b3032;
+  -webkit-text-fill-color: #3b3032;
 }
 
 button {
@@ -274,6 +277,53 @@ section {
 /* MOBILE */
 
 @media (max-width: 650px) {
+
+  /* Mobile text fixes */
+
+body {
+  color: #3b3032;
+}
+
+.hero h1,
+.message-section h2,
+.photos-section h2,
+.memories-section h2,
+.surprise-section h2,
+.final-section h2 {
+  color: #3b3032;
+}
+
+.hero .subtitle {
+  color: #75676a;
+}
+
+.letter {
+  color: #5f5355;
+}
+
+.letter p {
+  color: #5f5355;
+}
+
+.memory h3 {
+  color: #3b3032;
+}
+
+.memory p {
+  color: #75676a;
+}
+
+.birthday-quote {
+  color: #6b555b;
+}
+
+.final-section p {
+  color: #75676a;
+}
+
+.final-section .final-line {
+  color: #9b6674 !important;
+}
 
   .login-card {
     padding: 30px 15px;
