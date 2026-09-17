@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -17,15 +19,20 @@ body {
 button,
 input {
   font: inherit;
-  color: #3b3032;
-  -webkit-text-fill-color: #3b3032;
 }
 
 button {
   cursor: pointer;
 }
 
-/* LOGIN */
+a {
+  color: inherit;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
 
 .login-page {
   min-height: 100vh;
@@ -33,13 +40,13 @@ button {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background:
-    radial-gradient(
-      circle at center,
-      #f8dfe5 0%,
-      #faf5f2 55%,
-      #f4e9e5 100%
-    );
+
+  background: radial-gradient(
+    circle at center,
+    #f8dfe5 0%,
+    #faf5f2 55%,
+    #f4e9e5 100%
+  );
 }
 
 .login-card {
@@ -58,10 +65,11 @@ button {
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 15px;
+  color: #3b3032;
 }
 
 .login-card p {
-  color: #cbbfc2;
+  color: #75676a;
   font-family: Arial, sans-serif;
 }
 
@@ -75,10 +83,20 @@ button {
 .login-card input {
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid #5b454b;
-  background: #191416;
-  color: white;
+  border: 1px solid #d8bfc5;
+  background: #ffffff;
+  color: #3b3032;
+  -webkit-text-fill-color: #3b3032;
   outline: none;
+}
+
+.login-card input::placeholder {
+  color: #9a898d;
+  -webkit-text-fill-color: #9a898d;
+}
+
+.login-card input:focus {
+  border-color: #c99da8;
 }
 
 .login-card button {
@@ -86,28 +104,41 @@ button {
   border: none;
   border-radius: 8px;
   background: #e9c3cb;
-  color: #24171b;
+  color: #3b3032;
+  -webkit-text-fill-color: #3b3032;
+}
+
+.login-card button:hover {
+  background: #e1b5bf;
 }
 
 .error {
-  color: #e58c9f !important;
+  color: #c45f76 !important;
   margin-top: 15px;
 }
 
-/* GENERAL */
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
   min-height: 100vh;
   padding: 100px 25px;
 }
 
-.hero,
-.final-section {
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #faf5f2;
 }
 
 .small-title,
@@ -116,7 +147,7 @@ section {
   letter-spacing: 4px;
   font-family: Arial, sans-serif;
   font-size: 12px;
-  color: #cdaeb7;
+  color: #a87985;
 }
 
 .hero h1 {
@@ -124,55 +155,76 @@ section {
   line-height: 0.95;
   font-weight: 400;
   margin: 30px 0;
+  color: #3b3032;
 }
 
-.subtitle {
+.hero .subtitle {
   font-family: Arial, sans-serif;
-  color: #c8bdc0;
+  color: #75676a;
   font-size: 18px;
 }
 
-.scroll-button,
-.surprise-section button {
+.scroll-button {
   margin-top: 45px;
   padding: 16px 25px;
-  border: 1px solid #73535c;
+  border: 1px solid #c99da8;
   border-radius: 30px;
-  background: transparent;
-  color: rgb(0, 0, 0);
+  background: #ffffff;
+  color: #594347;
+  -webkit-text-fill-color: #594347;
+  transition: all 0.3s ease;
 }
 
-/* MESSAGE */
+.scroll-button:hover {
+  background: #f3d6dd;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   LETTER
+========================= */
 
 .message-section {
   max-width: 850px;
   margin: auto;
+  background: #faf5f2;
 }
 
-.message-section h2,
-.photos-section h2,
-.memories-section h2,
-.surprise-section h2 {
+.message-section h2 {
   font-size: clamp(38px, 6vw, 70px);
   font-weight: 400;
   margin: 25px 0 50px;
+  color: #3b3032;
 }
 
 .letter {
   font-size: 21px;
   line-height: 1.8;
-  color: #d8ced0;
+  color: #5f5355;
 }
 
 .letter p {
   margin-bottom: 30px;
+  color: #5f5355;
 }
 
-/* PHOTOS */
+
+/* =========================
+   PHOTOS
+========================= */
 
 .photos-section {
   max-width: 1200px;
   margin: auto;
+  background: #faf5f2;
+}
+
+.photos-section h2 {
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 400;
+  margin: 25px 0 50px;
+  color: #3b3032;
 }
 
 .photo-grid {
@@ -188,11 +240,22 @@ section {
   border-radius: 4px;
 }
 
-/* MEMORIES */
+
+/* =========================
+   MEMORIES
+========================= */
 
 .memories-section {
   max-width: 900px;
   margin: auto;
+  background: #faf5f2;
+}
+
+.memories-section h2 {
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 400;
+  margin: 25px 0 50px;
+  color: #3b3032;
 }
 
 .memory {
@@ -200,11 +263,11 @@ section {
   grid-template-columns: 80px 1fr;
   gap: 30px;
   padding: 35px 0;
-  border-bottom: 1px solid #3a3033;
+  border-bottom: 1px solid #e2d5d7;
 }
 
 .memory span {
-  color: #8f747c;
+  color: #a87985;
   font-family: Arial, sans-serif;
 }
 
@@ -212,15 +275,19 @@ section {
   font-size: 28px;
   font-weight: 400;
   margin: 0 0 10px;
+  color: #3b3032;
 }
 
 .memory p {
   font-family: Arial, sans-serif;
-  color: #bcb1b4;
+  color: #75676a;
   line-height: 1.6;
 }
 
-/* SURPRISE */
+
+/* =========================
+   SURPRISE
+========================= */
 
 .surprise-section {
   display: flex;
@@ -228,17 +295,49 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #faf5f2;
 }
 
-/* FINAL */
+.surprise-section h2 {
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 400;
+  margin: 25px 0 50px;
+  color: #3b3032;
+}
+
+.surprise-section button {
+  margin-top: 45px;
+  padding: 16px 25px;
+  border: 1px solid #c99da8;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #594347;
+  -webkit-text-fill-color: #594347;
+  transition: all 0.3s ease;
+}
+
+.surprise-section button:hover {
+  background: #f3d6dd;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
 
 .final-section {
-  background:
-    radial-gradient(
-      circle at center,
-      #f8dce3 0%,
-      #faf5f2 65%
-    );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: radial-gradient(
+    circle at center,
+    #f8dce3 0%,
+    #faf5f2 65%
+  );
 }
 
 .final-heart {
@@ -250,14 +349,23 @@ section {
   font-size: clamp(50px, 8vw, 100px);
   font-weight: 400;
   line-height: 1;
+  color: #3b3032;
 }
 
-.final-section p {
+.final-section > p {
   max-width: 550px;
   font-family: Arial, sans-serif;
-  color: #5c4c50;
+  color: #75676a;
   font-size: 18px;
   line-height: 1.7;
+}
+
+.birthday-quote {
+  max-width: 700px;
+  margin: 40px auto 0;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #6b555b;
 }
 
 .birthday-quote cite {
@@ -269,62 +377,17 @@ section {
   color: #8f747c;
 }
 
-.final-line {
-  margin-top: 35px;
-  color: #5c4c50 !important;
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-  /* Mobile text fixes */
-
-body {
-  color: #3b3032;
-}
-
-.hero h1,
-.message-section h2,
-.photos-section h2,
-.memories-section h2,
-.surprise-section h2,
-.final-section h2 {
-  color: #3b3032;
-}
-
-.hero .subtitle {
-  color: #75676a;
-}
-
-.letter {
-  color: #5f5355;
-}
-
-.letter p {
-  color: #5f5355;
-}
-
-.memory h3 {
-  color: #3b3032;
-}
-
-.memory p {
-  color: #75676a;
-}
-
-.birthday-quote {
-  color: #6b555b;
-}
-
-.final-section p {
-  color: #75676a;
-}
-
 .final-section .final-line {
+  margin-top: 35px;
   color: #9b6674 !important;
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
   .login-card {
     padding: 30px 15px;
   }
@@ -346,4 +409,12 @@ body {
     gap: 15px;
   }
 
+  .letter {
+    font-size: 19px;
+  }
+
+  .birthday-quote {
+    font-size: 17px;
+    line-height: 1.7;
+  }
 }
