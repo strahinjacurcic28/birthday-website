@@ -417,4 +417,9 @@ section {
     font-size: 17px;
     line-height: 1.7;
   }
+
+  .login-card h1 {
+  color: #3b3032 !important;
+  -webkit-text-fill-color: #3b3032 !important;
+}
 }
