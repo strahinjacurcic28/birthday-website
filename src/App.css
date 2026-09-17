@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #faf5f2;
+  color: #3b3032;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background:
+    radial-gradient(
+      circle at center,
+      #f8dfe5 0%,
+      #faf5f2 55%,
+      #f4e9e5 100%
+    );
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.heart {
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+
+.login-card h1 {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.login-card p {
+  color: #cbbfc2;
+  font-family: Arial, sans-serif;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.login-card input {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #5b454b;
+  background: #191416;
+  color: white;
+  outline: none;
+}
+
+.login-card button {
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #e9c3cb;
+  color: #24171b;
+}
+
+.error {
+  color: #e58c9f !important;
+  margin-top: 15px;
+}
+
+/* GENERAL */
+
+section {
+  min-height: 100vh;
+  padding: 100px 25px;
+}
+
+.hero,
+.final-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.small-title,
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #cdaeb7;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 9vw, 120px);
+  line-height: 0.95;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+.subtitle {
+  font-family: Arial, sans-serif;
+  color: #c8bdc0;
+  font-size: 18px;
+}
+
+.scroll-button,
+.surprise-section button {
+  margin-top: 45px;
+  padding: 16px 25px;
+  border: 1px solid #73535c;
+  border-radius: 30px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+
+/* MESSAGE */
+
+.message-section {
+  max-width: 850px;
+  margin: auto;
+}
+
+.message-section h2,
+.photos-section h2,
+.memories-section h2,
+.surprise-section h2 {
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 400;
+  margin: 25px 0 50px;
+}
+
+.letter {
+  font-size: 21px;
+  line-height: 1.8;
+  color: #d8ced0;
+}
+
+.letter p {
+  margin-bottom: 30px;
+}
+
+/* PHOTOS */
+
+.photos-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* MEMORIES */
+
+.memories-section {
+  max-width: 900px;
+  margin: auto;
+}
+
+.memory {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  padding: 35px 0;
+  border-bottom: 1px solid #3a3033;
+}
+
+.memory span {
+  color: #8f747c;
+  font-family: Arial, sans-serif;
+}
+
+.memory h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.memory p {
+  font-family: Arial, sans-serif;
+  color: #bcb1b4;
+  line-height: 1.6;
+}
+
+/* SURPRISE */
+
+.surprise-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* FINAL */
+
+.final-section {
+  background:
+    radial-gradient(
+      circle at center,
+      #f8dce3 0%,
+      #faf5f2 65%
+    );
+}
+
+.final-heart {
+  font-size: 55px;
+  margin-bottom: 25px;
+}
+
+.final-section h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.final-section p {
+  max-width: 550px;
+  font-family: Arial, sans-serif;
+  color: #5c4c50;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.birthday-quote cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 15px;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: #8f747c;
+}
+
+.final-line {
+  margin-top: 35px;
+  color: #5c4c50 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .login-card {
+    padding: 30px 15px;
+  }
+
+  .login-card h1 {
+    font-size: 30px;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memory {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+  }
+
+}
